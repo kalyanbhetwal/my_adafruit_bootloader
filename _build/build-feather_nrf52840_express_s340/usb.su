@@ -1,0 +1,11 @@
+lib/softdevice/s340_nrf52_6.1.1/s340_nrf52_6.1.1_API/include/nrf_soc.h:560:1:sd_power_usbpwrrdy_enable	0	static
+lib/softdevice/s340_nrf52_6.1.1/s340_nrf52_6.1.1_API/include/nrf_soc.h:571:1:sd_power_usbdetected_enable	0	static
+lib/softdevice/s340_nrf52_6.1.1/s340_nrf52_6.1.1_API/include/nrf_soc.h:582:1:sd_power_usbremoved_enable	0	static
+lib/softdevice/s340_nrf52_6.1.1/s340_nrf52_6.1.1_API/include/nrf_soc.h:590:1:sd_power_usbregstatus_get	0	static
+lib/softdevice/s340_nrf52_6.1.1/s340_nrf52_6.1.1_API/include/nrf_sdm.h:356:1:sd_softdevice_is_enabled	0	static
+src/usb/usb.c:46:13:power_event_handler	0	static
+src/usb/usb.c:52:6:USBD_IRQHandler	0	static
+src/usb/usb.c:58:6:usb_init	24	static
+src/usb/usb.c:112:6:usb_teardown	0	static
+src/usb/usb.c:121:6:tud_mount_cb	0	static
+src/usb/usb.c:126:6:tud_umount_cb	0	static

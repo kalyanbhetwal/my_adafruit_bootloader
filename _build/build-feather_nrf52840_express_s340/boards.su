@@ -1,0 +1,15 @@
+src/boards/boards.c:47:6:button_init	0	static
+src/boards/boards.c:59:6:button_pressed	0	static
+src/boards/boards.c:66:28:board_init_extra	0	static
+src/boards/boards.c:173:6:pwm_teardown	0	static
+src/boards/boards.c:198:6:led_pwm_init	12	static
+src/boards/boards.c:226:6:led_pwm_teardown	0	static
+src/boards/boards.c:231:6:led_pwm_duty_cycle	8	static
+src/boards/boards.c:242:6:led_tick	8	static
+src/boards/boards.c:165:6:SysTick_Handler	0	static
+src/boards/boards.c:353:6:neopixel_init	0	static
+src/boards/boards.c:67:6:board_init	16	static
+src/boards/boards.c:409:6:neopixel_write	40	static
+src/boards/boards.c:272:6:led_state	16	static
+src/boards/boards.c:396:6:neopixel_teardown	16	static
+src/boards/boards.c:132:6:board_teardown	8	static
