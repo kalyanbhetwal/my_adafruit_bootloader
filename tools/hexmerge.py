@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/Users/ant/opt/anaconda3/bin/python
 
 # Copyright (c) 2008-2018 Alexander Belchenko
 # All rights reserved.

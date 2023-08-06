@@ -33,8 +33,8 @@ else
   LD_FILE    = linker/$(MCU_SUB_VARIANT).ld
 endif
 
-GIT_VERSION = $(shell git describe --dirty --always --tags)
-GIT_SUBMODULE_VERSIONS = $(shell git submodule status | cut -d" " -f3,4 | paste -s -d" " -)
+GIT_VERSION := $(shell git describe --dirty --always --tags)
+GIT_SUBMODULE_VERSIONS := $(shell git submodule status | cut -d" " -f3,4 | paste -s -d" " -)
 
 # compiled file name
 OUT_NAME = $(BOARD)_bootloader-$(GIT_VERSION)
@@ -127,11 +127,11 @@ else ifeq ($(MCU_SUB_VARIANT),nrf52840)
 else
   $(error Sub Variant $(MCU_SUB_VARIANT) is unknown)
 endif
+
 ifdef USE_S340 
-#if S340 then adjust SD_NAME, undefine S140 and define S340 
+#if S340 then adjust SD_NAME and MCU
   SD_NAME = s340
   MCU_FLAGS = -DNRF52840_XXAA -DS340
-# CFLAGS+ = -US140 -DS340
 endif
 
 #------------------------------------------------------------------------------
@@ -448,7 +448,8 @@ $(BUILD)/update-$(OUT_NAME)_nosd.uf2: $(BUILD)/$(OUT_NAME)_nosd.hex
 # merge bootloader and sd hex together
 $(BUILD)/$(MERGED_FILE).hex: $(BUILD)/$(OUT_NAME).hex
 	@echo Create $(notdir $@)
-	@python3 tools/hexmerge.py -o $@ $< $(SD_HEX)
+	$(info @python tools/hexmerge.py -o $@ $< $(SD_HEX))
+	@/Users/ant/opt/anaconda3/bin/python tools/hexmerge.py -o $@ $< $(SD_HEX)
 
 # Create pkg zip file for bootloader+SD combo to use with DFU CDC
 $(BUILD)/$(MERGED_FILE).zip: $(BUILD)/$(OUT_NAME).hex
